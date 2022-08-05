@@ -139,7 +139,6 @@ Now MySQL or MariaDB setup is now ready, let us now restart eh service. You can 
 Now it has been installed you can now check the version by typing the below command
 
     node -v
-
 ### STEP 13 Install Yarn using NPM
 Now we will install Yarn which is a software packaging system developed by Facebook for Node.js, this is open source, so we will install it using npm
 
