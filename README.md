@@ -157,10 +157,10 @@ Now let us install the bench
 
 It will install a bench and will give you a message that the bench is installed successfully, now you can use various bench commands. Starting with the command “bench”
 
-### STEP 17 Install Frappe-Bench Environment using bench CLI
+### STEP 15 Install Frappe-Bench Environment using bench CLI
 Let us now create the frappe-bench environment. Here you have to decide the purpose for which you are installing ERPNext, it is just for test or training then you can use the latest version, which will be developing and may not be stable. However you can also use a stable version by choosing a specific version, You can search and learn which is the stable version today.
     
-To choose a specific stable version (for Production) you can use the branch version. I will be using branch version 13 in this installation. You can look for the latest stable release of the frappe environment.
+To choose a specific stable version (for Production) you can use the branch version. I will be using branch version 14 in this installation. You can look for the latest stable release of the frappe environment.
 
     bench init frappe-bench --verbose --frappe-branch version-14
 
@@ -176,19 +176,19 @@ Now you can use various bench commands by changing the directory. So you can nee
 
 Once you type "bench" you will see the various commands that bench cli has. Don’t worry, we will not be using all the commands, we just need to install EPRNext but have a quick look at these commands.
 
-### STEP 18 ERPNext Installation on Frappe Environment
+### STEP 16 ERPNext Installation on Frappe Environment
 
 make sure that your working directory is frappe-bench.
 
 Now you need to get the app from the frappe repository, have two options, either clone the latest development package, which is not stable currently, or install the stable package. I have given both options for you to choose from.
 
-To install the current package which is not stable you can use the below command
+<!-- To install the current package which is not stable you can use the below command
 
     bench get-app erpnext https://github.com/frappe/erpnext
+-->
+Frappe and ERPNext version would be same for a proper installation. I will be installing ERPNext Version 14, for that, I will be using the below command
 
-I will be installing ERPNext Version 13, for that, I will be using the below command
-
-    bench get-app --branch version-13 erpnext
+    bench get-app --branch version-14 erpnext
 
 From any of the options, it will clone the next application into the app’s directory of the frappe-bench directory. You don’t need to do anything with the directories. Just ensure that erpnext is available in the directory.
 
@@ -220,35 +220,61 @@ Now as we created a new site, we need to make sure this is our default site, so 
 
 Now ERPNext is installed in your server and you are ready to configure it. But beofre configuring there are few more steps in case you want o use this for production.
 
-    
+<!--
+### STEP 19 ERPNext Setup for Production
 
-### STEP 12 install frappe-bench
+ERPNext only supports NGINX, so you can't use apache2 on this server. You have to remove Apache2 from your server.
 
-    sudo -H pip3 install frappe-bench
-    
-    bench --version
-    
-### STEP 13 initilise the frappe bench & install frappe latest version 
+    sudo apt-get remove --purge apache2 apache2-data apache2-utils apache2-bin apache2.2-common
 
-    bench init frappe-bench 
-    
-    cd frappe-bench/
-    bench start
-    
-### STEP 14 create a site in frappe bench 
-    
-    bench new-site dcode.com
-    
-    bench use dcode.com
+You can do the following two tests to confirm apache has been removed:
 
-### STEP 15 install ERPNext latest version in bench & site
+Run
 
-    bench get-app erpnext
-    ###OR
-    bench get-app https://github.com/frappe/erpnext
+    which apache2
 
-    bench --site dcode.com install-app erpnext
-    
-    bench start
+This should return a blank line.
 
-    
+Run
+
+    sudo service apache2 start
+
+This should return apache2: unrecognized service
+-->
+
+### STEP 17 Production Deployment
+We will use an automatic bench set up for production by using the below command.
+
+#### Automatic Method:
+
+    sudo bench setup production USERNAME
+
+#### Manual Method:
+##### Setup Bench Supervisor
+In case the supervisor is not installed you can use the below command
+
+    sudo apt -y install supervisor
+    bench setup supervisor
+    sudo ln -s `pwd`/config/supervisor.conf /etc/supervisor/conf.d/frappe-bench.conf
+
+##### Setup Bench NginX
+
+    bench setup nginx
+    sudo ln -s `pwd`/config/nginx.conf /etc/nginx/conf.d/frappe-bench.conf
+
+Now you will get a message saying that erp.YOURDOMAIN.COM is on port 80
+
+You can simply open erp.YOURDOMAIN.COM in your web browser and check it will work fine.
+
+### STEP 18 ERPNext SSL Installation NginX
+
+Now your site is ready, you must configure the SSL certificate, I have explained that in simple steps.
+
+First, we will install spanny package as below
+
+    bench config dns_multitenant on
+    sudo pip3 install cryptography==37.0.4
+    sudo pip3 install certbot
+    sudo bench setup lets-encrypt erp.YOURDOMAIN.COM
+
+###THE END
