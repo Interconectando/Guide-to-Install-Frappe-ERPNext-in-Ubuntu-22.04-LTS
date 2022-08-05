@@ -277,4 +277,5 @@ First, we will install spanny package as below
     sudo pip3 install certbot
     sudo bench setup lets-encrypt erp.YOURDOMAIN.COM
 
-###THE END
+### Thanks
+
