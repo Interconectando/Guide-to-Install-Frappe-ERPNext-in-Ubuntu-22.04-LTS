@@ -131,7 +131,7 @@ Now MySQL or MariaDB setup is now ready, let us now restart eh service. You can 
 
 ### STEP 12 install Node.js 16 package
 
-    sudo apt install curl 
+    sudo apt install curl
     curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
     source ~/.profile
     nvm install 16
