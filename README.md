@@ -59,7 +59,7 @@ Now install the below package to manage the repository, usually, Ubuntu 20.04 ha
  if prompt for "Override local changes to /etc/pam.d/common-*?" on PAM Configuration, then safely choose "No".
 
 ### STEP 8 install wkhtmltopdf
-Wkhtmltopdf is an open source simple and much effective command-line shell utility that enables user to convert any given HTML (Web Page) to PDF document or an image (jpg, png, etc)
+Wkhtmltopdf is an open source simple and much effective command-line shell utility that enables user to convert any given HTML (Web Page) to PDF document or an image (jpg, png, etc).
 
     sudo apt install xvfb libfontconfig wkhtmltopdf -y
     sudo reboot
@@ -74,9 +74,10 @@ after reboot
     sudo apt install mariadb-server -y
 
 IMPORTANT: During this installation you'll be prompted to set the MySQL root password.
-If you are not prompted for the same You can initialize the MySQL server setup by executing the following command
+If you are not prompted for the same You can initialize the MySQL server setup by executing the following command.
     
     sudo mysql_secure_installation
+
 #### Prompt
 
         Enter current password for root (enter for none):   (safely press Enter)
@@ -89,13 +90,12 @@ If you are not prompted for the same You can initialize the MySQL server setup b
         Remove test database and access to it? [Y/n]        (Press "Y")
         Reload privilege tables now? [Y/n]                  (Press "Y")
 
-
 ### STEP 10  MySQL database development files
 
     sudo apt-get install libmysqlclient-dev -y
 
 ### STEP 11 Edit the mariadb configuration (unicode character encoding)
-You need to ensure to change the default character set of MySQL or MariaDB to Unicode instead of general. To do this you will need to edit the maria DB configuration file which is in this version located at /etc/mysql/mariadb.conf.d directory so you can directly edit this or locate the folder and then edit the file by typing the below command
+You need to ensure to change the default character set of MySQL or MariaDB to Unicode instead of general. To do this you will need to edit the maria DB configuration file which is in this version located at /etc/mysql/mariadb.conf.d directory so you can directly edit this or locate the folder and then edit the file by typing the below command.
 
     sudo nano /etc/mysql/mariadb.conf.d/50-server.cnf
 
@@ -103,17 +103,17 @@ Once the file opens you need to locate the line where collation-server says gene
 
     collation-server = utf8mb4_general_ci
 
-Modify above as below
+Modify above as below.
 
     collation-server = utf8mb4_unicode_ci
 
-Now press (Ctrl-S) then (Ctrl-X) to exit
+Now press (Ctrl-S) then (Ctrl-X) to exit.
 
 And also locate my.cnf and edit the below configuration.
 
     sudo nano /etc/mysql/my.cnf
 
-Make sure your configuration has the below lines in the file
+Make sure your configuration has the below lines in the file.
 
     [mysqld]
     character-set-client-handshake = FALSE
@@ -123,7 +123,7 @@ Make sure your configuration has the below lines in the file
     [mysql]
     default-character-set = utf8mb4
 
-Now press (Ctrl-S) then (Ctrl-X) to exit
+Now press (Ctrl-S) then (Ctrl-X) to exit.
 
 Now MySQL or MariaDB setup is now ready, let us now restart eh service. You can alternatively reboot as well.
 
@@ -136,12 +136,12 @@ Now MySQL or MariaDB setup is now ready, let us now restart eh service. You can 
     source ~/.profile
     nvm install 16
 
-Now it has been installed you can now check the version by typing the below command
+Now it has been installed you can now check the version by typing the below command.
 
     node -v
 
 ### STEP 13 Install Yarn using NPM
-Now we will install Yarn which is a software packaging system developed by Facebook for Node.js, this is open source, so we will install it using npm
+Now we will install Yarn which is a software packaging system developed by Facebook for Node.js, this is open source, so we will install it using npm.
 
     sudo apt install npm
     sudo npm install -g yarn
@@ -155,7 +155,7 @@ Now let us install the bench
 
     sudo -H pip3 install frappe-bench
 
-It will install a bench and will give you a message that the bench is installed successfully, now you can use various bench commands. Starting with the command “bench”
+It will install a bench and will give you a message that the bench is installed successfully, now you can use various bench commands. Starting with the command "bench".
 
 ### STEP 15 Install Frappe-Bench Environment using bench CLI
 Let us now create the frappe-bench environment. Here you have to decide the purpose for which you are installing ERPNext, it is just for test or training then you can use the latest version, which will be developing and may not be stable. However you can also use a stable version by choosing a specific version, You can search and learn which is the stable version today.
@@ -170,7 +170,7 @@ To choose a specific stable version (for Production) you can use the branch vers
 -->
 Now frappe bench environment is installed using bench CLI.
 
-Now you can use various bench commands by changing the directory. So you can need to change the directory
+Now you can use various bench commands by changing the directory. So you can need to change the directory.
 
     cd frappe-bench
 
@@ -186,9 +186,13 @@ Now you need to get the app from the frappe repository, have two options, either
 
     bench get-app erpnext https://github.com/frappe/erpnext
 -->
-Frappe and ERPNext version would be same for a proper installation. I will be installing ERPNext Version 14, for that, I will be using the below command
+Frappe and ERPNext version would be same for a proper installation. We will be installing ERPNext Version 14, for that, We will be using the below command.
 
     bench get-app --branch version-14 erpnext
+
+Payments app is mandatory from ERPNext version-14.
+
+    bench get-app payments
 
 From any of the options, it will clone the next application into the app’s directory of the frappe-bench directory. You don’t need to do anything with the directories. Just ensure that erpnext is available in the directory.
 
