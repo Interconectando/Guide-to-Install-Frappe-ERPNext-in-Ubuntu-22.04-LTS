@@ -71,7 +71,6 @@ after reboot
 
 ### STEP 9 Install MariaDB
 
-    sudo apt-get install software-properties-common
     sudo apt install mariadb-server -y
 
 IMPORTANT: During this installation you'll be prompted to set the MySQL root password.
