@@ -92,7 +92,7 @@ If you are not prompted for the same You can initialize the MySQL server setup b
 
 ### STEP 10  MySQL database development files
 
-    sudo apt-get install libmysqlclient-dev -y
+    sudo apt install libmysqlclient-dev -y
 
 ### STEP 11 Edit the mariadb configuration (unicode character encoding)
 You need to ensure to change the default character set of MySQL or MariaDB to Unicode instead of general. To do this you will need to edit the maria DB configuration file which is in this version located at /etc/mysql/mariadb.conf.d directory so you can directly edit this or locate the folder and then edit the file by typing the below command.
