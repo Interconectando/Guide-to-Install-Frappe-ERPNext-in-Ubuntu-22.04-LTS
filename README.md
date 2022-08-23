@@ -107,7 +107,7 @@ Modify above as below.
 
     collation-server = utf8mb4_unicode_ci
 
-Now press (Ctrl-S) then (Ctrl-X) to exit.
+Now press (Ctrl-X) and Save then exit.
 
 And also locate my.cnf and edit the below configuration.
 
@@ -123,7 +123,7 @@ Make sure your configuration has the below lines in the file.
     [mysql]
     default-character-set = utf8mb4
 
-Now press (Ctrl-S) then (Ctrl-X) to exit.
+Now press (Ctrl-X) and Save then exit.
 
 Now MySQL or MariaDB setup is now ready, let us now restart eh service. You can alternatively reboot as well.
 
