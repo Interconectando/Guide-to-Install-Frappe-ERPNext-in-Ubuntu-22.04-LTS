@@ -19,6 +19,18 @@ It is always a good idea to upgrade the Ubuntu package if anything is available,
     
     sudo apt update && sudo apt upgrade -y
 
+Check the server’s current timezone
+    
+    date
+    
+Set correct timezone as per your region
+
+    timedatectl set-timezone "Asia/Kolkata"
+
+You can run the following command to select your timezone.
+
+    timedatectl list-timezones
+    
 It is always recommended to reboot the server once the upgrade is done.
 
     sudo reboot
