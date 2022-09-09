@@ -19,7 +19,7 @@ It is always a good idea to upgrade the Ubuntu package if anything is available,
     
     sudo apt update && sudo apt upgrade -y
 
-Check the server’s current timezone
+Check the server's current timezone
     
     date
     
