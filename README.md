@@ -236,6 +236,23 @@ Now as we created a new site, we need to make sure this is our default site, so 
 
 Now ERPNext is installed in your server and you are ready to configure it. But beofre configuring there are few more steps in case you want o use this for production.
 
+#### Optional Modules:
+
+    bench get-app hrms
+    bench --site erp.YOURDOMAIN.COM install-app hrms
+    
+    bench get-app india_compliance https://github.com/resilient-tech/india-compliance
+    bench --site erp.YOURDOMAIN.COM install-app india_compliance
+    
+    bench get-app persona https://github.com/iptelephony/persona
+    bench --site erp.YOURDOMAIN.COM install-app persona
+    
+    bench get-app frappedesk
+    bench --site erp.YOURDOMAIN.COM install-app frappedesk
+    
+    bench get-app insights
+    bench --site erp.YOURDOMAIN.COM install-app insights
+
 <!--
 ### STEP 19 ERPNext Setup for Production
 
