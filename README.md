@@ -233,10 +233,12 @@ it will take a few moments to install the erpnext application on your site.
 Now as we created a new site, we need to make sure this is our default site, so we have to tell bench to use this site as default by using the below command
 
     bench use erp.YOURDOMAIN.COM
+    
+    bench start
 
 Now ERPNext is installed in your server and you are ready to configure it. But beofre configuring there are few more steps in case you want o use this for production.
 
-#### Optional Modules:
+#### Optional Modules (open new terminal):
 
     bench get-app hrms
     bench --site erp.YOURDOMAIN.COM install-app hrms
