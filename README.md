@@ -246,6 +246,9 @@ Now ERPNext is installed in your server and you are ready to configure it. But b
     bench get-app india_compliance https://github.com/resilient-tech/india-compliance
     bench --site erp.YOURDOMAIN.COM install-app india_compliance
     
+    bench get-app chat
+    bench --site erp.YOURDOMAIN.COM install-app chat
+    
     bench get-app persona https://github.com/iptelephony/persona
     bench --site erp.YOURDOMAIN.COM install-app persona
     
