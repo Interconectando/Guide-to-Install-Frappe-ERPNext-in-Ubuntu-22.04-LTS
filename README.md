@@ -310,10 +310,10 @@ Now your site is ready, you must configure the SSL certificate, I have explained
 
 First, we will install spanny package as below
 
-    bench config dns_multitenant on
-    sudo pip3 install cryptography==37.0.4
-    sudo pip3 install certbot
-    sudo bench setup lets-encrypt erp.YOURDOMAIN.COM
+```bench config dns_multitenant on```
+```sudo pip3 install cryptography==37.0.4```
+```sudo pip3 install certbot```
+```sudo bench setup lets-encrypt erp.YOURDOMAIN.COM```
 
 ### If getting [Error 13] on bench restart (Optional)
 
@@ -326,11 +326,11 @@ After logging-out/logging-in (so that the new group membership takes effect), ed
 
     sudo nano /etc/supervisor/supervisord.conf
 
-``` [unix_http_server]
+    [unix_http_server]
     file=/var/run/supervisor.sock ; (the path to the socket file)
     chmod=0770 ; socket file mode (default 0700)
     chown=erpnext:supervisor
-```
+
 
 sudo service supervisor restart
 
