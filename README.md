@@ -335,10 +335,9 @@ After logging-out/logging-in (so that the new group membership takes effect), ed
     chmod=0770 ; socket file mode (default 0700)
     chown=erpnext:supervisor
 
+    sudo service supervisor restart
 
-sudo service supervisor restart
-
-sudo supervisorctl stop all
+    sudo supervisorctl stop all
 
 ### Thanks
 
