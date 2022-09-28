@@ -310,7 +310,7 @@ Now your site is ready, you must configure the SSL certificate, I have explained
 
 First, we will install spanny package as below
 
-    `bench config dns_multitenant on`
+   `bench config dns_multitenant on`
     
     ```sudo pip3 install cryptography==37.0.4```
     
