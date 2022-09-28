@@ -321,7 +321,7 @@ sudo bench setup lets-encrypt erp.YOURDOMAIN.COM
 
 ### If getting [Error 13] on bench restart (Optional)
 
-####error: <class 'PermissionError'>, [Errno 13] Permission denied: file: /usr/lib/python3/dist-packages/supervisor/xmlrpc.py line: 560
+#### error: <class 'PermissionError'>, [Errno 13] Permission denied: file: /usr/lib/python3/dist-packages/supervisor/xmlrpc.py line: 560
 
     sudo addgroup supervisor
     sudo usermod -aG supervisor erpnext
