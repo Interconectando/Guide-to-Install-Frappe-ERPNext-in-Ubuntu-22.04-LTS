@@ -312,7 +312,7 @@ First, we will install spanny package as below
 
     bench config dns_multitenant on
 ``````
-sudo pip3 install cryptography==37.0.4
+sudo pip3 install -U cryptography
 ``````
     sudo pip3 install certbot
 ``````    
