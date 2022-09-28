@@ -315,5 +315,25 @@ First, we will install spanny package as below
     sudo pip3 install certbot
     sudo bench setup lets-encrypt erp.YOURDOMAIN.COM
 
+### If getting [Error 13] on bench restart (Optional)
+
+####error: <class 'PermissionError'>, [Errno 13] Permission denied: file: /usr/lib/python3/dist-packages/supervisor/xmlrpc.py line: 560
+
+    sudo addgroup supervisor
+    sudo usermod -aG supervisor erpnext
+
+After logging-out/logging-in (so that the new group membership takes effect), edit the supervisord configuration file (/etc/supervisor/supervisord.conf) to make the unix_http_server section look as follows
+
+    sudo nano /etc/supervisor/supervisord.conf
+
+```[unix_http_server]
+file=/var/run/supervisor.sock ; (the path to the socket file)
+chmod=0770 ; socket file mode (default 0700)
+chown=erpnext:supervisor```
+
+sudo service supervisor restart
+
+sudo supervisorctl stop all
+
 ### Thanks
 
