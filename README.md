@@ -326,10 +326,11 @@ After logging-out/logging-in (so that the new group membership takes effect), ed
 
     sudo nano /etc/supervisor/supervisord.conf
 
-`[unix_http_server]
-file=/var/run/supervisor.sock ; (the path to the socket file)
-chmod=0770 ; socket file mode (default 0700)
-chown=erpnext:supervisor`
+``` [unix_http_server]
+    file=/var/run/supervisor.sock ; (the path to the socket file)
+    chmod=0770 ; socket file mode (default 0700)
+    chown=erpnext:supervisor
+```
 
 sudo service supervisor restart
 
