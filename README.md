@@ -285,7 +285,7 @@ We will use an automatic bench set up for production by using the below command.
 
 #### Automatic Method:
 
-    sudo bench setup production USERNAME
+    sudo bench setup production erpnext
 
 #### Manual Method:
 ##### Setup Bench Supervisor
@@ -344,7 +344,7 @@ After logging-out/logging-in (so that the new group membership takes effect), ed
     
 #### if js and css file is not loading on login window run the following command
     
-    sudo chmod o+x /home/dcode-frappe
+    sudo chmod o+x /home/erpnext
 
 
 ## Thank You!🙏
