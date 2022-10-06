@@ -57,7 +57,7 @@ Setuptools is a collection of enhancements to the Python distutils that allow de
 
 Pip is a package manager for Python. It's a tool that allows you to install and manage additional libraries and dependencies that are not distributed as part of the standard library.
 
-    sudo apt install python3-setuptools python3-pip -y 
+    sudo apt install python3-setuptools python3-pip -y
 
 ### STEP 6 Install Redis server
 Resid can be used to process and analyze data in memory, this is prerequisite for ERPNext.
