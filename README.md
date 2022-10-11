@@ -240,11 +240,11 @@ Now ERPNext is installed in your server and you are ready to configure it. But b
 
 #### Optional Modules (open new terminal):
 
+    bench get-app --branch version-14 india_compliance https://github.com/resilient-tech/india-compliance
+    bench --site erp.YOURDOMAIN.COM install-app india_compliance
+    
     bench get-app hrms
     bench --site erp.YOURDOMAIN.COM install-app hrms
-    
-    bench get-app india_compliance https://github.com/resilient-tech/india-compliance
-    bench --site erp.YOURDOMAIN.COM install-app india_compliance
     
     bench get-app chat
     bench --site erp.YOURDOMAIN.COM install-app chat
