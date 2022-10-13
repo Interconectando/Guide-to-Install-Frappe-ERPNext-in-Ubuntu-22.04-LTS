@@ -6,13 +6,12 @@ A complete Guide to Install Frappe Bench in Ubuntu 22.04 LTS and install Frappe/
       Python 3.10+
       Node.js 16
       Redis                                         (caching and real time updates)
-      MariaDB 10.6.x / Postgres 9.5.x               (to run database driven apps)
+      MariaDB 10.6.x                                (to run database driven apps)
       yarn 1.12+                                    (js dependency manager)
       pip 22+                                       (py dependency manager)
       wkhtmltopdf (version 0.12.6 with patched qt)  (for pdf generation)
       cron                                          (bench's scheduled jobs: automated certificate renewal, scheduled backups)
       NGINX                                         (proxying multitenant sites in production)
-
 
 ### STEP 1 Update Server
 It is always a good idea to upgrade the Ubuntu package if anything is available, run the below command to upgrade and update.
