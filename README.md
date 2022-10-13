@@ -139,7 +139,7 @@ Make sure your configuration has the below lines in the file.
 
 Now press (Ctrl-X) and Save then exit.
 
-Now MySQL or MariaDB setup is now ready, let us now restart eh service. You can alternatively reboot as well.
+Now MySQL or MariaDB setup is now ready, let us now restart this service. You can alternatively reboot as well.
 
     sudo service mysql restart
 
