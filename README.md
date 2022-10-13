@@ -98,7 +98,7 @@ Change the root password? [Y/n]                     (Press "Y")
 New password:                                       ("Enter new Password")
 Re-enter new password:                              ("Re-enter new Password")
 Remove anonymous users? [Y/n]                       (Press "Y")
-Disallow root login remotely? [Y/n]                 (Press "Y") //If Press "N" then We might want to access the database from a remote server for using business analytics software like Metabase / PowerBI / Tableau, etc.
+Disallow root login remotely? [Y/n]                 (Press "Y") //If Press "N" then You want to access the database from a remote server for using business analytics software like Metabase / PowerBI / Tableau, etc.
 
 Remove test database and access to it? [Y/n]        (Press "Y")
 Reload privilege tables now? [Y/n]                  (Press "Y")
