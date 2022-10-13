@@ -37,6 +37,7 @@ It is always recommended to reboot the server once the upgrade is done.
     
 
 ### STEP 2  Create a new user
+I am using **erpnext** as frappe-user
 
     sudo adduser erpnext
     sudo usermod -aG sudo erpnext
@@ -319,7 +320,7 @@ sudo pip3 install -U cryptography
 sudo bench setup lets-encrypt erp.YOURDOMAIN.COM
 ``````
 
-### If getting [Error 13] on bench restart (Optional)
+### STEP 19 If getting [Error 13] on bench restart (Optional)
 
 #### error: <class 'PermissionError'>, [Errno 13] Permission denied: file: /usr/lib/python3/dist-packages/supervisor/xmlrpc.py line: 560
 
