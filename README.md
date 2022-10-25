@@ -253,6 +253,9 @@ Now ERPNext is installed in your server and you are ready to configure it. But b
     bench get-app persona https://github.com/iptelephony/persona
     bench --site erp.YOURDOMAIN.COM install-app persona
     
+    bench get-app drive
+    bench --site erp.YOURDOMAIN.COM install-app drive
+    
     bench get-app frappedesk
     bench --site erp.YOURDOMAIN.COM install-app frappedesk
     
