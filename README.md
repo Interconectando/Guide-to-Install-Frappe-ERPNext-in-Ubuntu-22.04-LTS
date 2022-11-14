@@ -347,6 +347,8 @@ After logging-out/logging-in (so that the new group membership takes effect), ed
 
     sudo supervisorctl stop all
     
+    sudo bench setup production erpnext
+    
 ### STEP 20 If _js_ and _css_ files are not loading on login window, run the following command (Optional)
     
     sudo chmod o+x /home/erpnext
