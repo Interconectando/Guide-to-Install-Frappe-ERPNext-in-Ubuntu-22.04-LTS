@@ -33,10 +33,11 @@ You can run the following command to select your timezone.
 It is always recommended to reboot the server once the upgrade is done.
 
     sudo reboot
-    
 
 ### STEP 2  Create a new user
 I am using **erpnext** as frappe-user
+
+#### you should not use _frappe_ or _erpnext_ as a frappe-user on your production server.
 
     sudo adduser erpnext
     sudo usermod -aG sudo erpnext
@@ -214,7 +215,7 @@ Now you have the application installed in your environment. The next step is to 
 
 To create a site, we will use the bench command as below
 
-    bench new-site erp.YOURDOMAIN.COM     # i'm using "erp" as a subdomain on my domain where I will deploy my site 
+    bench new-site erp.YOURDOMAIN.COM 
 
 Now site is deployed, by default frappe application will be installed at site. Don’t open the site yet, because we need to install ERPNext to the site.
 
@@ -355,5 +356,4 @@ After logging-out/logging-in (so that the new group membership takes effect), ed
 
 
 ## Thank You!🙏
-
 
