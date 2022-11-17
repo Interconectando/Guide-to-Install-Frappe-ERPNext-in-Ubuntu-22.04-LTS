@@ -212,11 +212,11 @@ From any of the options, it will clone the next application into the app’s dir
 
 Now you have the application installed in your environment. The next step is to install the application on-site, but before that, we need to create a new site.
 
-To create a site we will use the bench command as below
+To create a site, we will use the bench command as below
 
-    bench new-site erp.YOURDOMAIN.COM
+    bench new-site erp.YOURDOMAIN.COM     # i'm using "erp" as a subdomain on my domain where I will deploy my site 
 
-Now site is deployed, by default frappe application will be installed at site. Don’t open the site yet, because we need to install ERPnext to the site.
+Now site is deployed, by default frappe application will be installed at site. Don’t open the site yet, because we need to install ERPNext to the site.
 
 #### Make sure your sub-domain properly configured to access this server, where you hosted your domain.
 
