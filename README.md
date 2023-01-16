@@ -239,30 +239,7 @@ Now as we created a new site, we need to make sure this is our default site, so 
     
     bench start
 
-Now ERPNext is installed in your server and you are ready to configure it. But beofre configuring there are few more steps in case you want o use this for production.
-
-#### Optional Modules (open new terminal):
-
-    bench get-app --branch version-14 india_compliance https://github.com/resilient-tech/india-compliance
-    bench --site erp.YOURDOMAIN.COM install-app india_compliance
-    
-    bench get-app hrms
-    bench --site erp.YOURDOMAIN.COM install-app hrms
-    
-    bench get-app chat
-    bench --site erp.YOURDOMAIN.COM install-app chat
-    
-    bench get-app persona https://github.com/iptelephony/persona
-    bench --site erp.YOURDOMAIN.COM install-app persona
-    
-    bench get-app drive
-    bench --site erp.YOURDOMAIN.COM install-app drive #(Not recommend on same site)
-    
-    bench get-app frappedesk
-    bench --site erp.YOURDOMAIN.COM install-app frappedesk #(Not recommend on same site)
-    
-    bench get-app insights
-    bench --site erp.YOURDOMAIN.COM install-app insights #(Not recommend on same site)
+Now ERPNext is installed in your server and you are ready to configure it. But beofre configuring there are few more steps in case you want to use this for production.
 
 <!--
 ### STEP 19 ERPNext Setup for Production
@@ -354,6 +331,28 @@ After logging-out/logging-in (so that the new group membership takes effect), ed
     
     sudo chmod o+x /home/erpnext
 
+#### Optional Modules (open new terminal):
+
+    bench get-app --branch version-14 india_compliance https://github.com/resilient-tech/india-compliance
+    bench --site erp.YOURDOMAIN.COM install-app india_compliance
+    
+    bench get-app hrms
+    bench --site erp.YOURDOMAIN.COM install-app hrms
+    
+    bench get-app chat
+    bench --site erp.YOURDOMAIN.COM install-app chat
+    
+    bench get-app persona https://github.com/iptelephony/persona
+    bench --site erp.YOURDOMAIN.COM install-app persona
+    
+    bench get-app helpdesk
+    bench --site erp.YOURDOMAIN.COM install-app frappedesk #(Not recommend on same site)
+    
+    bench get-app insights
+    bench --site erp.YOURDOMAIN.COM install-app insights #(Not recommend on same site)
+    
+    bench get-app drive
+    bench --site erp.YOURDOMAIN.COM install-app drive #(Not recommend on same site)
 
 ## Thank You!🙏
 
