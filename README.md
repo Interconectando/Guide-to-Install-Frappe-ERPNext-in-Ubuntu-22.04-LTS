@@ -336,7 +336,7 @@ After logging-out/logging-in (so that the new group membership takes effect), ed
     bench get-app --branch version-14 india_compliance https://github.com/resilient-tech/india-compliance
     bench --site erp.YOURDOMAIN.COM install-app india_compliance
     
-    bench get-app hrms
+    bench get-app hrms --branch version-14
     bench --site erp.YOURDOMAIN.COM install-app hrms
     
     bench get-app chat
