@@ -76,12 +76,12 @@ Wkhtmltopdf is an open source simple and much effective command-line shell utili
 
     sudo apt install xvfb libfontconfig1 xfonts-75dpi -y
 
-for amd64
+#### for amd64
 
     wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6.1-2/wkhtmltox_0.12.6.1-2.jammy_amd64.deb 
     sudo dpkg -i wkhtmltox_0.12.6.1-2.jammy_amd64.deb
     
-for arm64
+#### for arm64
 
     wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6.1-2/wkhtmltox_0.12.6.1-2.jammy_arm64.deb
     sudo dpkg -i wkhtmltox_0.12.6.1-2.jammy_arm64.deb
