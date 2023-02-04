@@ -75,6 +75,15 @@ Now install the below package to manage the repository, usually, Ubuntu 20.04 ha
 Wkhtmltopdf is an open source simple and much effective command-line shell utility that enables user to convert any given HTML (Web Page) to PDF document or an image (jpg, png, etc).
 
     sudo apt install xvfb libfontconfig1 wkhtmltopdf xfonts-75dpi -y
+
+for amd64
+    wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6.1-2/wkhtmltox_0.12.6.1-2.jammy_amd64.deb 
+    sudo dpkg -i wkhtmltox_0.12.6.1-2.jammy_amd64.deb
+    
+for arm64
+    wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6.1-2/wkhtmltox_0.12.6.1-2.jammy_arm64.deb
+    sudo dpkg -i wkhtmltox_0.12.6.1-2.jammy_arm64.deb
+
 <!--    sudo reboot
 
 after reboot
