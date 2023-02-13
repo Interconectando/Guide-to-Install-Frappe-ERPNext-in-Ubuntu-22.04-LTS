@@ -214,7 +214,7 @@ Now you need to get the app from the frappe repository, have two options, either
 -->
 Frappe and ERPNext version would be same for a proper installation. We will be installing ERPNext Version 14, for that, We will be using the below command.
 
-    bench get-app --branch version-14 erpnext
+    bench get-app erpnext --branch version-14
 
 Payments app is mandatory from ERPNext version-14.
 
