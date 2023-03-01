@@ -328,9 +328,9 @@ After logging-out/logging-in (so that the new group membership takes effect), ed
 
 ```file=/var/run/supervisor.sock ; (the path to the socket file)```
 
-```chmod=0770 ; socket file mode (default 0700)```
+```chmod=0760 ; socket file mode (default 0700)```
 
-```chown=erpnext:supervisor```
+```chown=erpnext:erpnext```
 
     sudo service supervisor restart
 
