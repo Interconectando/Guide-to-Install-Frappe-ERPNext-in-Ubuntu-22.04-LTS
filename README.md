@@ -218,7 +218,7 @@ Frappe and ERPNext version would be same for a proper installation. We will be i
 
 Payments app is mandatory from ERPNext version-14.
 
-    bench get-app payments
+    bench get-app payments --branch version-14
 
 From any of the options, it will clone the next application into the app’s directory of the frappe-bench directory. You don’t need to do anything with the directories. Just ensure that erpnext is available in the directory.
 
