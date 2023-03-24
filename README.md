@@ -250,7 +250,7 @@ Now as we created a new site, we need to make sure this is our default site, so 
     
     bench start
 
-Now ERPNext is installed in your server and you are ready to configure it. But beofre configuring there are few more steps in case you want to use this for production.
+Now ERPNext is installed on your server and you are ready to configure it. But before configuring there are few more steps in case you want to use this for production.
 
 <!--
 ### STEP 19 ERPNext Setup for Production
