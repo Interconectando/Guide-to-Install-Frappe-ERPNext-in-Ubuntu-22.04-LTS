@@ -100,7 +100,7 @@ after reboot
 IMPORTANT: During this installation you'll be prompted to set the MySQL root password.
 If you are not prompted for the same You can initialize the MySQL server setup by executing the following command.
 
-    sudo service mysql start                    #run this command first, only if you are running Ubuntu in a Virtual Machine.
+    sudo service mysql start       #run this command first, only if you are running Ubuntu in a Virtual Machine.
     
     sudo mysql_secure_installation
 
