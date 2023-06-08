@@ -66,7 +66,7 @@ Resid can be used to process and analyze data in memory, this is prerequisite fo
     sudo apt install redis-server -y
 
 ### STEP 7 Install software-properties-common
-Now install the below package to manage the repository, usually, Ubuntu 20.04 has already installed it, but for the safe side, we will run this command.
+Now install the below package to manage the repository, usually, Ubuntu 22.04 has already installed it, but for the safe side, we will run this command.
 
     sudo apt install software-properties-common -y
  if prompt for "Override local changes to /etc/pam.d/common-*?" on PAM Configuration, then safely choose "No".
