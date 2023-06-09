@@ -162,7 +162,7 @@ Now MySQL or MariaDB setup is now ready, let us now restart this service. You ca
     sudo apt install curl
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
     source ~/.profile
-    nvm install 16
+    nvm install 18
 
 Now it has been installed you can now check the version by typing the below command.
 
@@ -171,8 +171,8 @@ Now it has been installed you can now check the version by typing the below comm
 ### STEP 13 Install Yarn using NPM
 Now we will install Yarn which is a software packaging system developed by Facebook for Node.js, this is open source, so we will install it using npm.
 
-    sudo apt install npm -y
-    sudo npm install -g yarn
+    <!-- sudo apt install npm -y -->
+    <!-- sudo --> npm install -g yarn
 
 Now our server is ready for the installation of the frappe environment, let us now dive into the frappe environment installation.
 
