@@ -226,7 +226,7 @@ From any of the options, it will clone the next application into the app’s dir
 
 Now you have the application installed in your environment. The next step is to install the application on-site, but before that, we need to create a new site.
 
-Run ```bench start``` then open another terminal window, then go to the "frappe-bench" directory and start from there
+##### Run ```bench start``` then open another terminal window, then go to the "frappe-bench" directory and start from there
 
  <!--   bench start -->
 
