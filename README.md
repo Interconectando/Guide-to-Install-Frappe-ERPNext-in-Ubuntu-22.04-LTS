@@ -159,7 +159,7 @@ Now MySQL or MariaDB setup is now ready, let us now restart this service. You ca
 ```
 sudo service mysql restart
 ```
-### STEP 12 install Node.js 16 package
+### STEP 12 install Node.js package
 ```
 sudo apt install curl
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
