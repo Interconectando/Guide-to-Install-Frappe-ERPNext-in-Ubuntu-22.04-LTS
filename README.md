@@ -61,7 +61,7 @@ Pip is a package manager for Python. It's a tool that allows you to install and 
 sudo apt install python3-setuptools python3-pip -y
 ```
 ### STEP 6 Install Redis server
-Resid can be used to process and analyze data in memory, this is prerequisite for ERPNext.
+Redis can be used to process and analyze data in memory, this is prerequisite for ERPNext.
 ```
 sudo apt install redis-server -y
 ```
@@ -96,7 +96,7 @@ after reboot
 
 ### STEP 9 Install MariaDB
 ```
-sudo apt install mariadb-server -y
+sudo apt install mariadb-server mariadb-client -y
 ```
 <!--
 IMPORTANT: During this installation you'll be prompted to set the MySQL root password.
