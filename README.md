@@ -167,11 +167,11 @@ source ~/.profile
 nvm install 18
 ```
 Sometimes, due to github raw content server not responding, you have to manually download "install.sh" and run in terminal.
-Download from "https://github.com/nvm-sh/nvm/archive/refs/tags/v0.39.3.zip"
+Download from **"https://github.com/nvm-sh/nvm/archive/refs/tags/v0.39.3.zip"**
 Then unzip and copy/paste "install.sh" file in your frappe-user home directory.
-Then 
+Then run
 ```
-run bash install.sh
+bash install.sh
 source ~/.profile
 nvm install 18
 ```
