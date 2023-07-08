@@ -370,6 +370,9 @@ bench --site erp.YOURDOMAIN.COM install-app hrms
 bench get-app chat
 bench --site erp.YOURDOMAIN.COM install-app chat
 
+bench get-app desk_navbar_extended https://github.com/gavindsouza/desk-navbar-extended
+bench --site erp.YOURDOMAIN.COM install-app desk_navbar_extended
+
 bench get-app persona https://github.com/iptelephony/persona
 bench --site erp.YOURDOMAIN.COM install-app persona
 
