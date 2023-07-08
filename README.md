@@ -385,5 +385,8 @@ bench --site erp.YOURDOMAIN.COM install-app insights #(Not recommend on same sit
 bench get-app drive
 bench --site erp.YOURDOMAIN.COM install-app drive #(Not recommend on same site)
 ```
-                                **Thank You!🙏**
+
+<p align="center">
+  <b>Thank You!🙏</b>
+</p>
 
