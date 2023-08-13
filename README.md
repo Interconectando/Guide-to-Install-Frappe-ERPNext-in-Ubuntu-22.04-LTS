@@ -320,8 +320,8 @@ Now your site is ready, you must configure the SSL certificate, I have explained
 First, we will install spanny package as below
 ```
 bench config dns_multitenant on
-sudo pip3 install -U cryptography
-sudo pip3 install certbot
+sudo pip install -U cryptography
+sudo pip install certbot
 sudo bench setup lets-encrypt erp.YOURDOMAIN.COM
 ```
 
