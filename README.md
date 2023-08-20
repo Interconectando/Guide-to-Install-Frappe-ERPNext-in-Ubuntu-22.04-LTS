@@ -53,12 +53,14 @@ Python-dev is the package that contains the header files for the Python C API, w
 ```
 sudo apt install python3-dev python3-venv -y
 ```
-### STEP 5 Install setuptools and pip (Python's Package Manager).
-Setuptools is a collection of enhancements to the Python distutils that allow developers to more easily build and distribute Python packages, especially ones that have dependencies on other packages. Packages built and distributed using setuptools look to the user like ordinary Python packages based on the distutils.
+### STEP 5 Install setuptools, pip and etc. (Python's Package Manager).
+Setuptools is a collection of enhancements to the Python distutils, allowing developers to more easily build and distribute Python packages, especially those that have dependencies on other packages. Packages built and distributed using setuptools appear to the user as ordinary Python packages based on the distutils.
 
 Pip is a package manager for Python. It's a tool that allows you to install and manage additional libraries and dependencies that are not distributed as part of the standard library.
+
+Rest are the weasyprint dependencies.
 ```
-sudo apt install python3-setuptools python3-pip -y
+sudo apt install python3-setuptools python3-pip python3-wheel python3-cffi libcairo2 libpango1.0-0 libpangocairo-1.0-0 libgdk-pixbuf2.0-0 libffi-dev shared-mime-info -y
 ```
 ### STEP 6 Install Redis server
 Redis can be used to process and analyze data in memory, this is prerequisite for ERPNext.
