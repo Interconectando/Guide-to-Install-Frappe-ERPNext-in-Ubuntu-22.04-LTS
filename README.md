@@ -383,14 +383,17 @@ bench --site erp.YOURDOMAIN.COM install-app persona
 bench get-app --branch version-14 it_management https://github.com/phamos-eu/it_management
 bench --site erp.YOURDOMAIN.COM install-app it_management
 
+bench get-app raven https://github.com/The-Commit-Company/Raven
+bench --site erp.YOURDOMAIN.COM install-app raven
+
 bench get-app helpdesk
-bench --site erp.YOURDOMAIN.COM install-app frappedesk #(Not recommend on same site)
+bench --site erp.YOURDOMAIN.COM install-app frappedesk #(Not recommended on same site)
 
 bench get-app insights
-bench --site erp.YOURDOMAIN.COM install-app insights #(Not recommend on same site)
+bench --site erp.YOURDOMAIN.COM install-app insights #(Not recommended on same site)
 
 bench get-app drive
-bench --site erp.YOURDOMAIN.COM install-app drive #(Not recommend on same site)
+bench --site erp.YOURDOMAIN.COM install-app drive #(Not recommended on same site)
 ```
 
 <p align="center">
