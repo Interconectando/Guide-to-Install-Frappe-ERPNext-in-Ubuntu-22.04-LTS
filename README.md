@@ -381,10 +381,10 @@ bench --site erp.YOURDOMAIN.COM install-app desk_navbar_extended
 bench get-app persona https://github.com/iptelephony/persona
 bench --site erp.YOURDOMAIN.COM install-app persona
 
-bench get-app print_designer https://github.com/frappe/print_designer
+bench get-app print_designer
 bench --site erp.YOURDOMAIN.COM install-app print_designer
 
-bench get-app website_builder https://github.com/frappe/builder
+bench get-app website_builder
 bench --site erp.YOURDOMAIN.COM install-app website_builder
 
 bench get-app --branch version-14 it_management https://github.com/phamos-eu/it_management
