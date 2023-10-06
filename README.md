@@ -24,7 +24,7 @@ date
 ```    
 Set correct timezone as per your region
 ```
-timedatectl set-timezone "Asia/Kolkata"
+sudo timedatectl set-timezone "Asia/Kolkata"
 ```
 You can run the following command to select your timezone.
 ```
