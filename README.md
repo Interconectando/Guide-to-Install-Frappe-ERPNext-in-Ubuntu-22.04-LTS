@@ -246,7 +246,7 @@ Now you have the application installed in your environment. The next step is to 
 
 To create a site, we will use the bench command as below
 ```
-bench new-site erp.YOURDOMAIN.COM 
+bench new-site erp.YOURDOMAIN.COM
 ```
 Now site is deployed, by default frappe application will be installed at site. Don’t open the site yet, because we need to install ERPNext to the site.
 
