@@ -48,32 +48,41 @@ Git is the most commonly used version control system. Git tracks the changes you
 ```    
 sudo apt install git -y
 ```
-### STEP 4 Install python3-dev and python3-venv
-Python-dev is the package that contains the header files for the Python C API, which is used by lxml because it includes Python C extensions for high performance.
-```
-sudo apt install python3-dev python3-venv -y
-```
-### STEP 5 Install setuptools, pip and etc. (Python's Package Manager).
-Setuptools is a collection of enhancements to the Python distutils, allowing developers to more easily build and distribute Python packages, especially those that have dependencies on other packages. Packages built and distributed using setuptools appear to the user as ordinary Python packages based on the distutils.
-
-Pip is a package manager for Python. It's a tool that allows you to install and manage additional libraries and dependencies that are not distributed as part of the standard library.
-
-Rest are the weasyprint dependencies.
-```
-sudo apt install python3-setuptools python3-pip python3-wheel python3-cffi libcairo2 libpango1.0-0 libpangocairo-1.0-0 libgdk-pixbuf2.0-0 libffi-dev shared-mime-info -y
-```
-### STEP 6 Install Redis server
-Redis can be used to process and analyze data in memory, this is prerequisite for ERPNext.
-```
-sudo apt install redis-server -y
-```
-### STEP 7 Install software-properties-common
+### STEP 4 Install software-properties-common
 Now install the below package to manage the repository, usually, Ubuntu 22.04 has already installed it, but for the safe side, we will run this command.
 ```
 sudo apt install software-properties-common -y
 ```
 If prompt for "Override local changes to /etc/pam.d/common-*?" on PAM Configuration, then safely choose "No".
 
+#### Add deadsnakes PPA for newer Python versions (Optional)
+```
+sudo add-apt-repository ppa:deadsnakes/ppa -y
+sudo apt update
+```
+### STEP 5 Install python3-dev and python3-venv
+Python-dev is the package that contains the header files for the Python C API, which is used by lxml because it includes Python C extensions for high performance.
+```
+sudo apt install python3-dev python3-venv -y
+```
+### STEP 6 Install setuptools, pip and etc. (Python's Package Manager).
+Setuptools is a collection of enhancements to the Python distutils, allowing developers to more easily build and distribute Python packages, especially those that have dependencies on other packages. Packages built and distributed using setuptools appear to the user as ordinary Python packages based on the distutils.
+
+Pip is a package manager for Python. It's a tool that allows you to install and manage additional libraries and dependencies that are not distributed as part of the standard library.
+<!--
+Rest are the weasyprint dependencies.
+-->
+```
+sudo apt install python3-setuptools python3-pip -y
+```
+<!--
+python3-wheel python3-cffi libcairo2 libpango1.0-0 libpangocairo-1.0-0 libgdk-pixbuf2.0-0 libffi-dev shared-mime-info
+-->
+### STEP 7 Install Redis server
+Redis can be used to process and analyze data in memory, this is prerequisite for ERPNext.
+```
+sudo apt install redis-server -y
+```
 ### STEP 8 install wkhtmltopdf
 Wkhtmltopdf is an open source simple and much effective command-line shell utility that enables user to convert any given HTML (Web Page) to PDF document or an image (jpg, png, etc).
 ```
@@ -82,13 +91,23 @@ sudo apt install xvfb libfontconfig1 fontconfig libxrender1 xfonts-base xfonts-7
 #### for amd64
 ```
 wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6.1-3/wkhtmltox_0.12.6.1-3.jammy_amd64.deb && \
-sudo dpkg -i wkhtmltox_0.12.6.1-3.jammy_amd64.deb
+sudo dpkg -i wkhtmltox_0.12.6.1-3.jammy_amd64.deb && \
+sudo cp /usr/local/bin/wkhtmlto* /usr/bin/ && \
+sudo chmod a+x /usr/bin/wk*
+sudo rm wk* && \
+sudo apt --fix-broken install -y
 ```    
+<!--
 #### for arm64
 ```
 wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6.1-3/wkhtmltox_0.12.6.1-3.jammy_arm64.deb && \
-sudo dpkg -i wkhtmltox_0.12.6.1-3.jammy_arm64.deb
+sudo dpkg -i wkhtmltox_0.12.6.1-3.jammy_arm64.deb && \
+sudo cp /usr/local/bin/wkhtmlto* /usr/bin/ && \
+sudo chmod a+x /usr/bin/wk*
+sudo rm wk* && \
+sudo apt --fix-broken install -y
 ```
+-->
 <!--    sudo reboot
 
 after reboot
