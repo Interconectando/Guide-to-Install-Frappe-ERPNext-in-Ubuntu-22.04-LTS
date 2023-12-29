@@ -182,9 +182,9 @@ sudo service mysql restart
 ```
 ### STEP 12 install Node.js package
 ```
-sudo apt install curl
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
-source ~/.profile
+sudo apt install curl && \
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash && \
+source ~/.profile && \
 nvm install 18
 ```
 <!--
