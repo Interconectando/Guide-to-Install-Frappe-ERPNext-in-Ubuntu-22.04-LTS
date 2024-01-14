@@ -170,6 +170,7 @@ Make sure your configuration has the below lines in the file.
 character-set-client-handshake = FALSE
 character-set-server = utf8mb4
 collation-server = utf8mb4_unicode_ci
+bind-address = 127.0.0.1
 
 [mysql]
 default-character-set = utf8mb4
