@@ -317,7 +317,7 @@ This should return apache2: unrecognized service
 We will use an automatic bench set up for production by using the below command.
 
 #### Automatic Method:
-run two times
+run **two** times
 ```
 sudo bench setup production erpnext
 ```
