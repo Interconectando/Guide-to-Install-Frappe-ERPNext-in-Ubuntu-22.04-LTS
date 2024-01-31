@@ -242,7 +242,7 @@ cd frappe-bench
 ```
 Once you type "bench" you will see the various commands that bench cli has. Don’t worry, we will not be using all the commands, we just need to install EPRNext but have a quick look at these commands.
 
-### STEP 16 ERPNext Installation on Frappe Environment
+### STEP 15 ERPNext Installation on Frappe Environment
 
 make sure that your working directory is frappe-bench.
 
@@ -314,7 +314,7 @@ sudo service apache2 start
 This should return apache2: unrecognized service
 -->
 
-### STEP 17 Production Deployment
+### STEP 16 Production Deployment
 We will use an automatic bench set up for production by using the below command.
 
 #### Automatic Method:
@@ -339,7 +339,7 @@ Now you will get a message saying that erp.YOURDOMAIN.COM is on port 80
 
 You can simply open erp.YOURDOMAIN.COM in your web browser and check it will work fine.
 
-### STEP 18 ERPNext SSL Installation NginX
+### STEP 17 ERPNext SSL Installation NginX
 
 Now your site is ready, you must configure the SSL certificate, I have explained that in simple steps.
 
@@ -359,7 +359,7 @@ sudo netfilter-persistent save
 sudo systemctl restart nginx
 ```
 
-### STEP 19 If getting [Error 13] on bench restart (Optional)
+### STEP 18 If getting [Error 13] on bench restart (Optional)
 
 #### error: <class 'PermissionError'>, [Errno 13] Permission denied: file: /usr/lib/python3/dist-packages/supervisor/xmlrpc.py line: 560
 ```
@@ -381,7 +381,7 @@ sudo service supervisor restart
 sudo supervisorctl stop all
 sudo bench setup production erpnext
 ```    
-### STEP 20 If _js_ and _css_ files are not loading on login window, run the following command (Optional)
+### STEP 19 If _js_ and _css_ files are not loading on login window, run the following command (Optional)
 ```
 sudo chmod o+x /home/erpnext
 ```
