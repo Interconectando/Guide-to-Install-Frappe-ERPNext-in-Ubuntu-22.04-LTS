@@ -3,8 +3,8 @@ A complete Guide to Install Frappe Bench in Ubuntu 22.04 LTS and install Frappe/
 
 ### Pre-requisites 
 ```
-Python 3.10+
-Node.js 18
+Python 3.11+
+Node.js 20
 Redis                                         (caching and real time updates)
 MariaDB 10.6.x                                (to run database driven apps)
 yarn 1.12+                                    (js dependency manager)
@@ -55,7 +55,7 @@ sudo apt install software-properties-common -y
 ```
 If prompt for "Override local changes to /etc/pam.d/common-*?" on PAM Configuration, then safely choose "No".
 
-#### Add deadsnakes PPA for newer Python versions (Optional)
+#### Add deadsnakes PPA for newer Python versions
 ```
 sudo add-apt-repository ppa:deadsnakes/ppa -y
 sudo apt update
@@ -63,7 +63,7 @@ sudo apt update
 ### STEP 5 Install python3-dev and python3-venv
 Python-dev is the package that contains the header files for the Python C API, which is used by lxml because it includes Python C extensions for high performance.
 ```
-sudo apt install python3-dev python3-venv -y
+sudo apt install python3.11-dev python3.11-venv -y
 ```
 ### STEP 6 Install setuptools, pip and etc. (Python's Package Manager).
 Setuptools is a collection of enhancements to the Python distutils, allowing developers to more easily build and distribute Python packages, especially those that have dependencies on other packages. Packages built and distributed using setuptools appear to the user as ordinary Python packages based on the distutils.
@@ -140,13 +140,16 @@ Disallow root login remotely? [Y/n]                 (Press "Y") //If Press "N" t
 Remove test database and access to it? [Y/n]        (Press "Y")
 Reload privilege tables now? [Y/n]                  (Press "Y")
 ```
-
+<!--
 ### STEP 10  MySQL database development files
 ```
 sudo apt install libmysqlclient-dev -y
 ```
-### STEP 11 Edit the mariadb configuration (unicode character encoding)
-You need to ensure to change the default character set of MySQL or MariaDB to Unicode instead of general. To do this you will need to edit the maria DB configuration file which is in this version located at /etc/mysql/mariadb.conf.d directory so you can directly edit this or locate the folder and then edit the file by typing the below command.
+-->
+### STEP 10 Edit the mariadb configuration (unicode character encoding)
+You need to ensure to change the default character set of MySQL or MariaDB to Unicode instead of general.
+<!--
+To do this you will need to edit the maria DB configuration file which is in this version located at /etc/mysql/mariadb.conf.d directory so you can directly edit this or locate the folder and then edit the file by typing the below command.
 ```
 sudo nano /etc/mysql/mariadb.conf.d/50-server.cnf
 ```
@@ -159,8 +162,9 @@ Modify above as below.
 collation-server = utf8mb4_unicode_ci
 ```
 Now press (Ctrl-X) and Save then exit.
+-->
 
-And also locate my.cnf and edit the below configuration.
+Update configuration in `my.cnf`.
 ```
 sudo nano /etc/mysql/my.cnf
 ```
@@ -181,12 +185,12 @@ Now MySQL or MariaDB setup is now ready, let us now restart this service. You ca
 ```
 sudo service mysql restart
 ```
-### STEP 12 install Node.js package
+### STEP 11 install Node.js package
 ```
 sudo apt install curl && \
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash && \
 source ~/.profile && \
-nvm install 18
+nvm install 20
 ```
 <!--
 Sometimes, due to github raw content server not responding, you have to manually download "install.sh" and run in terminal.
@@ -203,28 +207,28 @@ Now it has been installed, you can now check the version by typing the below com
 ```
 node -v
 ```
-### STEP 13 Install Yarn using NPM
+### STEP 12 Install Yarn using NPM
 Now we will install Yarn which is a software packaging system developed by Facebook for Node.js, this is open source, so we will install it using npm.
 ```
 npm install -g yarn
 ```
 Now our server is ready for the installation of the frappe environment, let us now dive into the frappe environment installation.
 
-### STEP 14 Bench Installation
+### STEP 13 Bench Installation
 The bench is a Command-line tool to manage Frappe Deployments, this tool has various commands, the frappe uses the bench for the command-line tool as well as for the bench directory, so don’t confuse yourself. We will first install the bench package which will be used to set up a frappe environment, create a site, do backup, change the setup, and so on. In short, Bench provides a user-friendly interface to set up and manage multiple frappe-based applications and sites where erpnext is one of the applications.
 
 Now let us install the bench
 ```
-sudo -H pip install frappe-bench
+sudo -H python3.11 -m pip install frappe-bench
 ```
 It will install a bench and will give you a message that the bench is installed successfully, now you can use various bench commands. Starting with the command "bench".
 
-### STEP 15 Install Frappe-Bench Environment using bench CLI
+### STEP 14 Install Frappe-Bench Environment using bench CLI
 Let us now create the frappe-bench environment. Here you have to decide the purpose for which you are installing ERPNext, it is just for test or training then you can use the latest version, which will be developing and may not be stable. However you can also use a stable version by choosing a specific version, You can search and learn which is the stable version today.
     
 To choose a specific stable version (for Production) you can use the branch version. I will be using branch version 14 in this installation. You can look for the latest stable release of the frappe environment.
 ```
-bench init frappe-bench --verbose --frappe-branch version-14
+bench init frappe-bench --verbose --frappe-branch version-15
 ```
 <!-- To deploy the latest (for development) frappe-bench environment make sure to run the command while you are in your home directory or your user and use the below command.
 
@@ -250,12 +254,9 @@ Now you need to get the app from the frappe repository, have two options, either
 -->
 Frappe and ERPNext version would be same for a proper installation. We will be installing ERPNext Version 14, for that, We will be using the below command.
 ```
-bench get-app erpnext --branch version-14
+bench get-app erpnext --branch version-15
 ```
-Payments app is mandatory from ERPNext version-14.
-```
-bench get-app payments --branch version-14
-```
+
 From any of the options, it will clone the next application into the app’s directory of the frappe-bench directory. You don’t need to do anything with the directories. Just ensure that erpnext is available in the directory.
 
 Now you have the application installed in your environment. The next step is to install the application on-site, but before that, we need to create a new site.
@@ -386,10 +387,13 @@ sudo chmod o+x /home/erpnext
 ```
 #### Optional Modules (open new terminal):
 ```
-bench get-app --branch version-14 india_compliance https://github.com/resilient-tech/india-compliance
+bench get-app payments --branch version-15
+bench --site erp.YOURDOMAIN.COM install-app payments
+
+bench get-app --branch version-15 india_compliance https://github.com/resilient-tech/india-compliance
 bench --site erp.YOURDOMAIN.COM install-app india_compliance
 
-bench get-app hrms --branch version-14
+bench get-app hrms --branch version-15
 bench --site erp.YOURDOMAIN.COM install-app hrms
 
 bench get-app chat
@@ -406,9 +410,6 @@ bench --site erp.YOURDOMAIN.COM install-app print_designer
 
 bench get-app builder
 bench --site erp.YOURDOMAIN.COM install-app builder
-
-bench get-app --branch version-14 it_management https://github.com/phamos-eu/it_management
-bench --site erp.YOURDOMAIN.COM install-app it_management
 
 bench get-app raven https://github.com/The-Commit-Company/Raven
 bench --site erp.YOURDOMAIN.COM install-app raven
