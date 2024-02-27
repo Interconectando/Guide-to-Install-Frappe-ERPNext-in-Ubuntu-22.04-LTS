@@ -203,10 +203,11 @@ Now it has been installed, you can now check the version by typing the below com
 ```
 node -v
 ```
-### STEP 13 Install Yarn using NPM
+### STEP 13 Install NPM and Yarn using NPM
 Now we will install Yarn which is a software packaging system developed by Facebook for Node.js, this is open source, so we will install it using npm.
 ```
-npm install -g yarn
+sudo apt install npm
+sudo npm install -g yarn
 ```
 Now our server is ready for the installation of the frappe environment, let us now dive into the frappe environment installation.
 
