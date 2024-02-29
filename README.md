@@ -402,7 +402,7 @@ bench --site erp.YOURDOMAIN.COM install-app chat
 bench get-app desk_navbar_extended https://github.com/gavindsouza/desk-navbar-extended
 bench --site erp.YOURDOMAIN.COM install-app desk_navbar_extended
 
-bench get-app persona https://github.com/iptelephony/persona
+bench get-app persona https://github.com/iptelephony/persona    #this app not required from Frappe v15.16.0
 bench --site erp.YOURDOMAIN.COM install-app persona
 
 bench get-app print_designer
