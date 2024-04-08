@@ -203,7 +203,7 @@ Now it has been installed, you can now check the version by typing the below com
 ```
 node -v
 ```
-### STEP 13 Install NPM and Yarn using NPM
+### STEP 13 Install NPM and Yarn
 Now we will install Yarn which is a software packaging system developed by Facebook for Node.js, this is open source, so we will install it using npm.
 ```
 sudo apt install npm
