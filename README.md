@@ -383,7 +383,7 @@ sudo bench setup production erpnext
 ```    
 ### STEP 20 If _js_ and _css_ files are not loading on login window, run the following command (Optional)
 ```
-sudo chmod o+x /home/erpnext
+sudo chmod o+x /home/$USER
 ```
 #### Optional Modules (open new terminal):
 ```
