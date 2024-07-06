@@ -320,7 +320,7 @@ We will use an automatic bench set up for production by using the below command.
 #### Automatic Method:
 run **two** times
 ```
-sudo bench setup production erpnext
+sudo bench setup production $USER
 ```
 #### Manual Method:
 ##### Setup Bench Supervisor
