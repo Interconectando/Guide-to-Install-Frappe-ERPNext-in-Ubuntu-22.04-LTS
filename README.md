@@ -385,6 +385,14 @@ sudo bench setup production erpnext
 ```
 sudo chmod o+x /home/$USER
 ```
+
+### if getting spawn error on ```bench restart```
+```
+bench setup socketio && \
+bench setup supervisor && \
+bench setup redis && \
+sudo supervisorctl reload
+```
 #### Optional Modules (open new terminal):
 ```
 bench get-app --branch version-14 india_compliance https://github.com/resilient-tech/india-compliance
