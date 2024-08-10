@@ -354,8 +354,8 @@ sudo bench setup lets-encrypt erp.YOURDOMAIN.COM
 
 #### if getting error like "Some challenges have failed.", then open port 80 and 443 or try below commands
 ```
-sudo iptables -I INPUT 6 -m state --state NEW -p tcp --dport 80 -j ACCEPT
-sudo iptables -I INPUT 6 -m state --state NEW -p tcp --dport 443 -j ACCEPT
+sudo iptables -A INPUT -m state --state NEW -p tcp --dport 80 -j ACCEPT
+sudo iptables -A INPUT -m state --state NEW -p tcp --dport 443 -j ACCEPT
 sudo netfilter-persistent save
 sudo systemctl restart nginx
 ```
