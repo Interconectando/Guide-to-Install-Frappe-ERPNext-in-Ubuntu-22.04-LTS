@@ -391,38 +391,32 @@ sudo chmod o+x /home/erpnext
 bench get-app payments --branch version-15
 bench --site erp.YOURDOMAIN.COM install-app payments
 
-bench get-app --branch version-15 india_compliance https://github.com/resilient-tech/india-compliance
+bench get-app india_compliance --branch version-15 https://github.com/resilient-tech/india-compliance
 bench --site erp.YOURDOMAIN.COM install-app india_compliance
 
 bench get-app hrms --branch version-15
 bench --site erp.YOURDOMAIN.COM install-app hrms
 
-bench get-app chat
-bench --site erp.YOURDOMAIN.COM install-app chat
+bench get-app insights --branch main
+bench --site erp.YOURDOMAIN.COM install-app insights
+
+bench get-app print_designer --branch main
+bench --site erp.YOURDOMAIN.COM install-app print_designer
+
+bench get-app raven --branch main https://github.com/The-Commit-Company/Raven
+bench --site erp.YOURDOMAIN.COM install-app raven
+
+bench get-app helpdesk --branch main
+bench --site erp.YOURDOMAIN.COM install-app frappedesk
+
+bench get-app drive --branch main
+bench --site erp.YOURDOMAIN.COM install-app drive #(Not recommended on same site)
 
 bench get-app desk_navbar_extended https://github.com/gavindsouza/desk-navbar-extended
 bench --site erp.YOURDOMAIN.COM install-app desk_navbar_extended
 
-bench get-app persona https://github.com/iptelephony/persona    #this app not required from Frappe v15.16.0
-bench --site erp.YOURDOMAIN.COM install-app persona
-
-bench get-app print_designer
-bench --site erp.YOURDOMAIN.COM install-app print_designer
-
 bench get-app builder
 bench --site erp.YOURDOMAIN.COM install-app builder
-
-bench get-app raven https://github.com/The-Commit-Company/Raven
-bench --site erp.YOURDOMAIN.COM install-app raven
-
-bench get-app helpdesk
-bench --site erp.YOURDOMAIN.COM install-app frappedesk #(Not recommended on same site)
-
-bench get-app insights
-bench --site erp.YOURDOMAIN.COM install-app insights #(Not recommended on same site)
-
-bench get-app drive
-bench --site erp.YOURDOMAIN.COM install-app drive #(Not recommended on same site)
 ```
 
 <p align="center">
