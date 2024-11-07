@@ -397,7 +397,7 @@ bench --site erp.YOURDOMAIN.COM install-app india_compliance
 bench get-app hrms --branch version-15
 bench --site erp.YOURDOMAIN.COM install-app hrms
 
-bench get-app insights --branch main
+bench get-app insights --branch version-3
 bench --site erp.YOURDOMAIN.COM install-app insights
 
 bench get-app print_designer --branch main
