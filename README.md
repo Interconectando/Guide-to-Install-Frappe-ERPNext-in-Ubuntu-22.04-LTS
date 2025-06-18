@@ -3,7 +3,7 @@ A complete Guide to Install Frappe Bench in Ubuntu 22.04 LTS and install Frappe/
 
 ### Pre-requisites 
 ```
-Python 3.10+
+Python 3.11+
 Node.js 18
 Redis                                         (caching and real time updates)
 MariaDB 10.6.x                                (to run database driven apps)
@@ -24,7 +24,7 @@ date
 ```    
 Set correct timezone as per your region
 ```
-sudo timedatectl set-timezone "Asia/Kolkata"
+sudo timedatectl set-timezone "America/Mexico_City"
 ```
 You can run the following command to select your timezone.
 ```
